@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://bf6621ngf10y8"]
+
+[ext_resource type="Texture2D" uid="uid://ca6yq2vy1x2t1" path="res://Assets/DP.png" id="1_gxlju"]
+[ext_resource type="Script" path="res://Dates/Base.gd" id="1_y34mb"]
+[ext_resource type="Texture2D" uid="uid://bp32ru556sxar" path="res://Assets/FP.png" id="2_osnpe"]
+[ext_resource type="Texture2D" uid="uid://cnfgk87cci76q" path="res://Assets/OP.png" id="3_t1ee7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ioyx"]
+bg_color = Color(0.352941, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qyw5"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txew5"]
+bg_color = Color(0.0588235, 0, 0.34902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kvec"]
+bg_color = Color(0.166667, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qyey"]
+bg_color = Color(0, 0.34902, 0.0509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36gp6"]
+bg_color = Color(0, 1, 0.25, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_y34mb")
+
+[node name="DP" type="ProgressBar" parent="."]
+offset_left = 56.0
+offset_top = 11.0
+offset_right = 253.0
+offset_bottom = 38.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2ioyx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6qyw5")
+value = 50.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="DP"]
+position = Vector2(-24, 13)
+texture = ExtResource("1_gxlju")
+
+[node name="FP" type="ProgressBar" parent="."]
+offset_left = 56.0
+offset_top = 48.0
+offset_right = 253.0
+offset_bottom = 75.0
+theme_override_styles/background = SubResource("StyleBoxFlat_txew5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8kvec")
+value = 50.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="FP"]
+position = Vector2(-24, 13)
+texture = ExtResource("2_osnpe")
+
+[node name="OP" type="ProgressBar" parent="."]
+offset_left = 56.0
+offset_top = 86.0
+offset_right = 253.0
+offset_bottom = 113.0
+theme_override_styles/background = SubResource("StyleBoxFlat_8qyey")
+theme_override_styles/fill = SubResource("StyleBoxFlat_36gp6")
+value = 50.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="OP"]
+position = Vector2(-25, 13)
+texture = ExtResource("3_t1ee7")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpquf2v21sefm"]
+
+[ext_resource type="PackedScene" uid="uid://bf6621ngf10y8" path="res://Dates/Base.tscn" id="1_jlei2"]
+[ext_resource type="Texture2D" uid="uid://cyo4pb1g283k2" path="res://Assets/Backgrounds/DoorDate.png" id="2_i5yow"]
+[ext_resource type="Script" path="res://Dates/Door.gd" id="2_nyh0f"]
+[ext_resource type="Texture2D" uid="uid://bgcg0cwmcyyd1" path="res://Assets/Dates/Door1.png" id="3_1ajt0"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://Balloon/textbox.tscn" id="5_h08k0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1xlq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1ajt0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" instance=ExtResource("1_jlei2")]
+script = ExtResource("2_nyh0f")
+
+[node name="Background" type="Sprite2D" parent="." index="0"]
+texture_repeat = 2
+texture = ExtResource("2_i5yow")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 700, 500)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(350, 300)
+sprite_frames = SubResource("SpriteFrames_f1xlq")
+
+[node name="Textbox" parent="." index="5" instance=ExtResource("5_h08k0")]
+override = true
+size_override = Vector2(240, 240)
+position_override = Vector2(454, 10)

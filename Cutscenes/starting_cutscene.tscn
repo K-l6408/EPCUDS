@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://61ns0hn0f26t"]
+
+[ext_resource type="Texture2D" uid="uid://c452cqylrpw7o" path="res://Assets/Backgrounds/Outschool.png" id="1_58hfw"]
+[ext_resource type="Script" path="res://Cutscenes/starting_cutscene.gd" id="1_431o4"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://Balloon/textbox.tscn" id="2_4525x"]
+[ext_resource type="Texture2D" uid="uid://df4s8es3ytj8m" path="res://Assets/Backgrounds/Hour.png" id="2_f7elk"]
+[ext_resource type="Texture2D" uid="uid://ctyv7pjjekaeg" path="res://Assets/Backgrounds/Minute.png" id="3_tayam"]
+
+[node name="StartingCutscene" type="Node2D"]
+script = ExtResource("1_431o4")
+
+[node name="BG" type="Sprite2D" parent="."]
+texture = ExtResource("1_58hfw")
+centered = false
+
+[node name="H" type="Sprite2D" parent="BG"]
+position = Vector2(344, 172)
+rotation = 1.309
+texture = ExtResource("2_f7elk")
+offset = Vector2(0, -9)
+
+[node name="M" type="Sprite2D" parent="BG"]
+position = Vector2(344, 172)
+rotation = -2.35369
+texture = ExtResource("3_tayam")
+offset = Vector2(0, -10.5)
+
+[node name="Textbox" parent="." instance=ExtResource("2_4525x")]
